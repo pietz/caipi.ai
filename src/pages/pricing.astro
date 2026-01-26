@@ -1,0 +1,187 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/ui/Button.svelte';
+---
+
+<Layout title="Pricing - Caipi">
+  <main class="py-24 px-6">
+    <div class="max-w-xl mx-auto text-center">
+      <h1 class="text-4xl font-bold text-foreground mb-4">
+        Simple, fair pricing
+      </h1>
+      <p class="text-lg text-muted-foreground mb-12">
+        One-time purchase. No subscriptions. All updates included.
+      </p>
+
+      <div class="bg-card rounded-2xl p-8 border border-border mb-8">
+        <div class="inline-block mb-4 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
+          Alpha Pricing
+        </div>
+        <div class="text-6xl font-bold text-foreground mb-2">€5</div>
+        <div class="text-muted-foreground mb-8">
+          <span class="line-through">€20</span> — 75% off during alpha
+        </div>
+
+        <ul class="text-left space-y-4 mb-8">
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <div>
+              <div class="font-medium text-foreground">Full access to all features</div>
+              <div class="text-sm text-muted-foreground">File access, terminal commands, skills, and more</div>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <div>
+              <div class="font-medium text-foreground">All v1.x updates included</div>
+              <div class="text-sm text-muted-foreground">New features and improvements at no extra cost</div>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <div>
+              <div class="font-medium text-foreground">macOS support</div>
+              <div class="text-sm text-muted-foreground">Apple Silicon and Intel Macs (macOS 12+)</div>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <div>
+              <div class="font-medium text-foreground">Priority support</div>
+              <div class="text-sm text-muted-foreground">Direct access to the developer for help and feedback</div>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <div>
+              <div class="font-medium text-foreground">Early adopter access</div>
+              <div class="text-sm text-muted-foreground">Shape the product with your feedback</div>
+            </div>
+          </li>
+        </ul>
+
+        <Button variant="primary" size="lg" class="w-full" href="#buy">
+          Buy Caipi — €5
+        </Button>
+
+        <p class="text-xs text-muted-foreground mt-4">
+          Secure payment via Paddle. VAT included where applicable.
+        </p>
+      </div>
+
+      <!-- Pricing roadmap -->
+      <div class="bg-muted/50 rounded-xl p-6 text-left">
+        <h3 class="font-semibold text-foreground mb-4">Pricing Roadmap</h3>
+        <div class="space-y-3 text-sm">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 rounded-full bg-primary"></div>
+              <span class="text-foreground">Alpha (now)</span>
+            </div>
+            <span class="font-medium text-foreground">€5</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 rounded-full bg-muted-foreground"></div>
+              <span class="text-muted-foreground">Beta</span>
+            </div>
+            <span class="text-muted-foreground">€10</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 rounded-full bg-muted-foreground"></div>
+              <span class="text-muted-foreground">Full Release</span>
+            </div>
+            <span class="text-muted-foreground">€20</span>
+          </div>
+        </div>
+        <p class="text-xs text-muted-foreground mt-4">
+          Buy early, pay less. Early supporters get the best deal.
+        </p>
+      </div>
+
+      <!-- Requirements -->
+      <div class="mt-12 pt-8 border-t border-border">
+        <h3 class="font-semibold text-foreground mb-4">Requirements</h3>
+        <p class="text-sm text-muted-foreground mb-4">
+          Caipi is a native interface for Claude Code. You'll need:
+        </p>
+        <ul class="text-sm text-muted-foreground space-y-2">
+          <li class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>macOS 12 (Monterey) or later</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>Claude Code CLI installed (<a href="https://docs.anthropic.com/en/docs/claude-code" class="text-primary hover:underline">installation guide</a>)</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>Claude Pro, Team subscription, or API access</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- FAQ -->
+      <div class="mt-12 pt-8 border-t border-border text-left">
+        <h3 class="font-semibold text-foreground mb-6 text-center">Frequently Asked Questions</h3>
+
+        <div class="space-y-6">
+          <div>
+            <h4 class="font-medium text-foreground mb-2">Do I need to pay for Claude separately?</h4>
+            <p class="text-sm text-muted-foreground">
+              Yes. Caipi is an interface for Claude Code — you'll need an existing Claude subscription
+              (Pro or Team) or API access from Anthropic. Caipi does not include Claude access.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-medium text-foreground mb-2">What's included in "all v1.x updates"?</h4>
+            <p class="text-sm text-muted-foreground">
+              Every update from version 1.0 to 1.99 is included at no extra cost. This includes new
+              features, improvements, and bug fixes. Major version upgrades (v2.0+) may require a
+              new purchase, typically at a discounted upgrade price for existing customers.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-medium text-foreground mb-2">Will Windows/Linux be supported?</h4>
+            <p class="text-sm text-muted-foreground">
+              It's on the roadmap! We're focusing on macOS first to ensure a great experience.
+              Windows and Linux support will be added based on demand. Your purchase will include
+              all platforms when available.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-medium text-foreground mb-2">What if I'm having issues?</h4>
+            <p class="text-sm text-muted-foreground">
+              Reach out to us! We're happy to help troubleshoot problems and hear your feedback.
+              As an alpha product, we're actively improving based on user input.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-border">
+        <a href="/" class="text-sm text-primary hover:underline">← Back to home</a>
+      </div>
+    </div>
+  </main>
+</Layout>
