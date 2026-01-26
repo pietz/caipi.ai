@@ -27,7 +27,7 @@ import CaipiDemo from '../components/demo/CaipiDemo.svelte';
     <!-- Hero text -->
     <div class="text-center mb-12 md:mb-14 relative z-10">
       <div class="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 px-4 py-1.5 rounded-full text-sm text-primary font-medium mb-6 badge-pulse">
-        Now in public beta
+        Now in public alpha
       </div>
       <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-4">
         Claude Code, <span class="text-gradient">beautifully</span>
@@ -38,7 +38,7 @@ import CaipiDemo from '../components/demo/CaipiDemo.svelte';
     </div>
 
     <!-- Interactive Demo -->
-    <div class="relative z-10 w-full max-w-4xl animate-float-in">
+    <div class="relative z-10 w-full max-w-5xl animate-float-in">
       <CaipiDemo client:load />
       <p class="text-center text-sm text-muted-foreground mt-4">
         Try it — toggle the sidebars, switch themes, explore the interface.
@@ -50,6 +50,144 @@ import CaipiDemo from '../components/demo/CaipiDemo.svelte';
       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <path d="M12 5v14M19 12l-7 7-7-7"/>
       </svg>
+    </div>
+  </section>
+
+  <!-- Two Audiences Section -->
+  <section class="audience-section py-24 md:py-32 px-4 md:px-8 relative overflow-hidden">
+    <!-- Diagonal background split -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute inset-0 bg-gradient-to-br from-secondary/40 via-transparent to-transparent"></div>
+      <div class="absolute bottom-0 right-0 w-2/3 h-2/3 bg-gradient-to-tl from-primary/5 via-transparent to-transparent"></div>
+    </div>
+
+    <div class="max-w-6xl mx-auto relative">
+      <div class="text-center mb-16">
+        <div class="text-xs uppercase tracking-widest text-primary font-semibold mb-4">Two paths, one destination</div>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight leading-tight">
+          Power for everyone
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
+        <!-- Non-technical users card -->
+        <div class="audience-card relative">
+          <div class="absolute -inset-px bg-gradient-to-br from-primary/20 via-transparent to-transparent rounded-2xl"></div>
+          <div class="relative bg-card/80 backdrop-blur-sm rounded-2xl p-8 border border-border h-full">
+            <!-- Floating badge -->
+            <div class="absolute -top-3 left-8 px-4 py-1 bg-primary text-background text-xs font-bold rounded-full shadow-lg">
+              MOST USERS
+            </div>
+
+            <div class="mt-4 mb-6">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
+                  <svg class="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold">Non-technical users</h3>
+              </div>
+              <p class="text-muted-foreground leading-relaxed">
+                You use ChatGPT or Claude Desktop for AI help. But they can only chat — they can't actually <em>do</em> things on your computer.
+              </p>
+            </div>
+
+            <div class="space-y-4 mb-8">
+              <div class="text-sm font-medium text-foreground/80 uppercase tracking-wide">With Caipi, AI can:</div>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-sm text-muted-foreground">Read & organize your local files and folders</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-sm text-muted-foreground">Create presentations, reports, and documents</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-sm text-muted-foreground">Process receipts, invoices, and screenshots</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-sm text-muted-foreground">Automate tedious, repetitive tasks</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="pt-6 border-t border-border/50">
+              <div class="flex items-center gap-2 text-sm text-muted-foreground">
+                <span class="inline-block w-2 h-2 rounded-full bg-primary/50"></span>
+                No coding required — just describe what you want
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Developer card -->
+        <div class="audience-card relative md:mt-12">
+          <div class="relative bg-gradient-to-br from-secondary/60 to-card/40 backdrop-blur-sm rounded-2xl p-8 border border-border/50 h-full">
+            <div class="mb-6">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-muted-foreground/20 to-transparent flex items-center justify-center border border-border/50">
+                  <svg class="w-6 h-6 text-muted-foreground" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold">Developers</h3>
+              </div>
+              <p class="text-muted-foreground leading-relaxed">
+                You know Claude Code. You love it. But sometimes the terminal isn't the right tool — especially for non-coding tasks.
+              </p>
+            </div>
+
+            <div class="space-y-4 mb-8">
+              <div class="text-sm font-medium text-foreground/80 uppercase tracking-wide">Why switch to Caipi:</div>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-muted-foreground shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-sm text-muted-foreground">Visual task tracking & file explorer</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-muted-foreground shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-sm text-muted-foreground">Native macOS experience with shortcuts</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-muted-foreground shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-sm text-muted-foreground">Persistent conversation history</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-muted-foreground shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-sm text-muted-foreground">Toggle-able skills & capabilities</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="pt-6 border-t border-border/30">
+              <div class="flex items-center gap-2 text-sm text-muted-foreground">
+                <span class="inline-block w-2 h-2 rounded-full bg-muted-foreground/50"></span>
+                Same Claude Code engine, better interface
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -147,87 +285,6 @@ import CaipiDemo from '../components/demo/CaipiDemo.svelte';
     </div>
   </section>
 
-  <!-- Why Caipi Section -->
-  <section class="py-24 px-4 md:px-8 bg-secondary/30">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl font-bold text-foreground mb-6 text-center">
-        More than a chat wrapper
-      </h2>
-      <p class="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-        Most chat UIs are just a pretty face for an API. Caipi is different — it runs Claude Code locally,
-        giving Claude real access to your system.
-      </p>
-
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-card rounded-xl p-6 border border-border">
-          <div class="w-10 h-10 rounded-lg bg-destructive/10 flex items-center justify-center mb-4">
-            <span class="text-destructive text-lg">✕</span>
-          </div>
-          <h3 class="font-semibold text-foreground mb-2">Typical Chat Apps</h3>
-          <ul class="space-y-2 text-sm text-muted-foreground">
-            <li>• Can only read/write text you paste in</li>
-            <li>• No access to your files or terminal</li>
-            <li>• Can't run code or install packages</li>
-            <li>• Isolated from your actual workflow</li>
-          </ul>
-        </div>
-
-        <div class="bg-card rounded-xl p-6 border border-primary/30 ring-1 ring-primary/20">
-          <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-            <span class="text-primary text-lg">✓</span>
-          </div>
-          <h3 class="font-semibold text-foreground mb-2">Caipi + Claude Code</h3>
-          <ul class="space-y-2 text-sm text-muted-foreground">
-            <li>• Reads and edits files on your machine</li>
-            <li>• Runs terminal commands directly</li>
-            <li>• Installs packages, runs builds, executes tests</li>
-            <li>• Integrates with macOS apps via AppleScript</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Use Cases Section -->
-  <section class="py-24 px-4 md:px-8">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl font-bold text-foreground mb-4 text-center">
-        Who is Caipi for?
-      </h2>
-      <p class="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-        Whether you're a developer or not, Caipi brings Claude's capabilities to your daily workflow.
-      </p>
-
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="feature-card p-6">
-          <h3 class="font-semibold text-foreground mb-3">For Developers</h3>
-          <p class="text-sm text-muted-foreground mb-4">
-            Use the same powerful Claude Code you love, but in a dedicated chat interface.
-            Perfect for non-coding tasks where a terminal isn't ideal.
-          </p>
-          <ul class="text-sm text-muted-foreground space-y-1">
-            <li>• Write documentation and READMEs</li>
-            <li>• Manage project tasks and planning</li>
-            <li>• Research and brainstorm architecture</li>
-          </ul>
-        </div>
-
-        <div class="feature-card p-6">
-          <h3 class="font-semibold text-foreground mb-3">For Everyone Else</h3>
-          <p class="text-sm text-muted-foreground mb-4">
-            No terminal experience needed. Get Claude's agent capabilities through
-            a friendly, familiar chat interface.
-          </p>
-          <ul class="text-sm text-muted-foreground space-y-1">
-            <li>• Manage emails and calendar</li>
-            <li>• Organize files and documents</li>
-            <li>• Automate repetitive tasks</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Differentiator Quote -->
   <section class="py-20 px-4 md:px-8 text-center relative">
     <div class="divider-line mx-auto mb-12"></div>
@@ -241,93 +298,179 @@ import CaipiDemo from '../components/demo/CaipiDemo.svelte';
 
   <!-- Pricing Section -->
   <section class="py-24 px-4 md:px-8" id="pricing">
-    <div class="max-w-xl mx-auto text-center">
-      <h2 class="text-3xl font-bold text-foreground mb-4">
-        Simple pricing
-      </h2>
-      <p class="text-muted-foreground mb-8">
-        One-time purchase. All future updates within this version included.
-      </p>
-
-      <div class="cta-box bg-gradient-to-br from-secondary to-background border border-border rounded-2xl p-8">
-        <div class="inline-block mb-4 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
-          Alpha Pricing
-        </div>
-        <div class="text-5xl font-bold text-foreground mb-2">€5</div>
-        <div class="text-muted-foreground mb-6">
-          <span class="line-through">€20</span> — 75% off during alpha
-        </div>
-
-        <ul class="text-left text-sm space-y-3 mb-8">
-          <li class="flex items-center gap-2">
-            <svg class="w-5 h-5 text-primary shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-            <span>Full access to all features</span>
-          </li>
-          <li class="flex items-center gap-2">
-            <svg class="w-5 h-5 text-primary shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-            <span>All v1.x updates included</span>
-          </li>
-          <li class="flex items-center gap-2">
-            <svg class="w-5 h-5 text-primary shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-            <span>macOS (Apple Silicon & Intel)</span>
-          </li>
-          <li class="flex items-center gap-2">
-            <svg class="w-5 h-5 text-primary shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-            <span>Priority support & feedback channel</span>
-          </li>
-        </ul>
-
-        <a href="https://github.com/pietz/caipi.ai/releases/download/v0.1.0/caipi_0.1.0_aarch64.dmg" class="btn-primary w-full justify-center">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-          </svg>
-          Download for Mac — €5
-        </a>
-
-        <p class="text-xs text-muted-foreground mt-4">
-          Requires an existing Claude subscription (Pro, Team, or API access).
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-foreground mb-4">
+          Simple pricing
+        </h2>
+        <p class="text-muted-foreground max-w-lg mx-auto">
+          One-time purchase. Support early and get the best deal — price increases as we approach stable release.
         </p>
       </div>
 
-      <p class="text-sm text-muted-foreground mt-6">
-        Price increases to €10 at beta, €20 at full release.<br />
-        Early supporters get the best deal.
+      <!-- Pricing timeline -->
+      <div class="grid md:grid-cols-3 gap-6 mb-8">
+        <!-- Alpha - Current -->
+        <div class="pricing-card pricing-card-active relative">
+          <div class="absolute -inset-px bg-gradient-to-b from-primary/30 to-primary/5 rounded-2xl"></div>
+          <div class="relative bg-card rounded-2xl p-6 border border-primary/30 h-full flex flex-col">
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 bg-primary text-background text-xs font-bold rounded-full">NOW</span>
+              <span class="text-xs text-muted-foreground">January 2026</span>
+            </div>
+            <div class="text-sm font-semibold text-primary uppercase tracking-wide mb-2">Alpha</div>
+            <div class="flex items-baseline gap-1 mb-4">
+              <span class="text-4xl font-bold text-foreground">5</span>
+              <span class="text-xl font-semibold text-foreground">€</span>
+            </div>
+            <p class="text-sm text-muted-foreground mb-6 flex-grow">
+              Early access. Help shape the product with your feedback.
+            </p>
+            <ul class="space-y-2 mb-6 text-sm">
+              <li class="flex items-center gap-2 text-foreground">
+                <svg class="w-4 h-4 text-primary shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                Full feature access
+              </li>
+              <li class="flex items-center gap-2 text-foreground">
+                <svg class="w-4 h-4 text-primary shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                All v1.x updates included
+              </li>
+              <li class="flex items-center gap-2 text-foreground">
+                <svg class="w-4 h-4 text-primary shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                Priority support channel
+              </li>
+            </ul>
+            <a href="https://github.com/pietz/caipi.ai/releases/download/v0.1.0/caipi_0.1.0_aarch64.dmg" class="btn-primary w-full justify-center text-sm">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+              </svg>
+              Download — 5€
+            </a>
+          </div>
+        </div>
+
+        <!-- Beta - Coming soon -->
+        <div class="pricing-card pricing-card-muted relative opacity-80">
+          <div class="relative bg-secondary/30 rounded-2xl p-6 border border-border/50 h-full flex flex-col">
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 bg-muted text-muted-foreground text-xs font-medium rounded-full">SOON</span>
+              <span class="text-xs text-muted-foreground">February 2026</span>
+            </div>
+            <div class="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-2">Beta</div>
+            <div class="flex items-baseline gap-1 mb-4">
+              <span class="text-4xl font-bold text-muted-foreground">10</span>
+              <span class="text-xl font-semibold text-muted-foreground">€</span>
+            </div>
+            <p class="text-sm text-muted-foreground mb-6 flex-grow">
+              More stable. Most features finalized.
+            </p>
+            <ul class="space-y-2 mb-6 text-sm">
+              <li class="flex items-center gap-2 text-muted-foreground">
+                <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                Full feature access
+              </li>
+              <li class="flex items-center gap-2 text-muted-foreground">
+                <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                All v1.x updates included
+              </li>
+              <li class="flex items-center gap-2 text-muted-foreground">
+                <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                Community support
+              </li>
+            </ul>
+            <div class="btn-secondary w-full justify-center text-sm text-center opacity-50 cursor-not-allowed">
+              Coming February
+            </div>
+          </div>
+        </div>
+
+        <!-- Stable - Future -->
+        <div class="pricing-card pricing-card-muted relative opacity-60">
+          <div class="relative bg-secondary/20 rounded-2xl p-6 border border-border/30 h-full flex flex-col">
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 bg-muted/50 text-muted-foreground/70 text-xs font-medium rounded-full">LATER</span>
+              <span class="text-xs text-muted-foreground/70">March 2026</span>
+            </div>
+            <div class="text-sm font-semibold text-muted-foreground/70 uppercase tracking-wide mb-2">Stable</div>
+            <div class="flex items-baseline gap-1 mb-4">
+              <span class="text-4xl font-bold text-muted-foreground/70">20</span>
+              <span class="text-xl font-semibold text-muted-foreground/70">€</span>
+            </div>
+            <p class="text-sm text-muted-foreground/70 mb-6 flex-grow">
+              Production-ready. Full documentation.
+            </p>
+            <ul class="space-y-2 mb-6 text-sm">
+              <li class="flex items-center gap-2 text-muted-foreground/70">
+                <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                Full feature access
+              </li>
+              <li class="flex items-center gap-2 text-muted-foreground/70">
+                <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                All v1.x updates included
+              </li>
+              <li class="flex items-center gap-2 text-muted-foreground/70">
+                <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                Community support
+              </li>
+            </ul>
+            <div class="btn-secondary w-full justify-center text-sm text-center opacity-50 cursor-not-allowed">
+              Coming March
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-center text-sm text-muted-foreground">
+        Early supporters help cover development costs and get the best price. Thank you for believing in the project.
       </p>
     </div>
   </section>
 
   <!-- Requirements Section -->
   <section class="py-16 px-4 md:px-8 bg-secondary/30">
-    <div class="max-w-2xl mx-auto text-center">
-      <h3 class="text-lg font-semibold text-foreground mb-4">Requirements</h3>
-      <div class="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
-        <div class="flex items-center gap-2 bg-card px-4 py-2 rounded-lg border border-border">
+    <div class="max-w-3xl mx-auto text-center">
+      <h3 class="text-lg font-semibold text-foreground mb-6">Requirements</h3>
+      <div class="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground mb-6">
+        <div class="flex items-center gap-2 bg-card px-4 py-2.5 rounded-lg border border-border">
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
             <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09997 22C7.78997 22.05 6.79997 20.68 5.95997 19.47C4.24997 17 2.93997 12.45 4.69997 9.39C5.56997 7.87 7.12997 6.91 8.81997 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
           </svg>
           macOS 12+
         </div>
-        <div class="flex items-center gap-2 bg-card px-4 py-2 rounded-lg border border-border">
+        <div class="flex items-center gap-2 bg-card px-4 py-2.5 rounded-lg border border-border">
           <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" />
           </svg>
-          Claude Code CLI
+          Claude Code CLI installed
         </div>
-        <div class="flex items-center gap-2 bg-card px-4 py-2 rounded-lg border border-border">
-          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <div class="flex items-center gap-2 bg-card px-4 py-2.5 rounded-lg border border-primary/30">
+          <svg class="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z" />
           </svg>
-          Claude subscription
+          <span class="text-foreground">Claude Pro or Max subscription</span>
         </div>
       </div>
+      <p class="text-xs text-muted-foreground max-w-lg mx-auto">
+        Caipi connects to the official Claude Code CLI — you'll need an active Claude subscription (Pro at $20/mo or Max at $100-200/mo) that includes Claude Code access.
+      </p>
     </div>
   </section>
 
@@ -349,14 +492,106 @@ import CaipiDemo from '../components/demo/CaipiDemo.svelte';
   </section>
 
   <!-- Footer -->
-  <footer class="py-12 px-4 md:px-8 border-t border-border">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-      <div class="text-muted-foreground text-sm">© 2025 Caipi. Built with care.</div>
-      <div class="flex items-center gap-8">
-        <a href="/terms" class="text-muted-foreground text-sm hover:text-foreground transition-colors">Terms</a>
-        <a href="/privacy" class="text-muted-foreground text-sm hover:text-foreground transition-colors">Privacy</a>
-        <a href="/refund" class="text-muted-foreground text-sm hover:text-foreground transition-colors">Refund Policy</a>
-        <a href="mailto:caipi@plpp.de" class="text-muted-foreground text-sm hover:text-foreground transition-colors">Contact</a>
+  <footer class="py-16 px-4 md:px-8 border-t border-border">
+    <div class="max-w-6xl mx-auto">
+      <!-- Main footer content -->
+      <div class="grid md:grid-cols-3 gap-12 mb-12">
+        <!-- Brand -->
+        <div>
+          <a href="/" class="flex items-center gap-2 font-semibold text-lg tracking-tight text-foreground mb-4">
+            <span class="w-2 h-2 bg-primary rounded-full" style="box-shadow: 0 0 12px var(--primary);"></span>
+            Caipi
+          </a>
+          <p class="text-sm text-muted-foreground leading-relaxed">
+            A beautiful native interface for Claude Code. All the power of an AI agent, wrapped in an app you'll enjoy using.
+          </p>
+        </div>
+
+        <!-- Features -->
+        <div>
+          <h4 class="font-semibold text-foreground mb-4">Features</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-center gap-2 text-muted-foreground">
+              <svg class="w-4 h-4 text-primary shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              Local file access
+            </li>
+            <li class="flex items-center gap-2 text-muted-foreground">
+              <svg class="w-4 h-4 text-primary shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              Terminal commands
+            </li>
+            <li class="flex items-center gap-2 text-muted-foreground">
+              <svg class="w-4 h-4 text-primary shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              Task tracking sidebar
+            </li>
+            <li class="flex items-center gap-2 text-muted-foreground">
+              <svg class="w-4 h-4 text-primary shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              File explorer
+            </li>
+            <li class="flex items-center gap-2 text-muted-foreground">
+              <svg class="w-4 h-4 text-primary shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              Conversation history
+            </li>
+            <li class="flex items-center gap-2 text-muted-foreground">
+              <svg class="w-4 h-4 text-primary shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              Toggle-able skills
+            </li>
+          </ul>
+        </div>
+
+        <!-- Coming Soon -->
+        <div>
+          <h4 class="font-semibold text-foreground mb-4">Coming Soon</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-center gap-2 text-muted-foreground">
+              <svg class="w-4 h-4 text-muted-foreground/50 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" stroke-dasharray="4 2" />
+              </svg>
+              <span>Windows & Linux versions</span>
+              <span class="text-xs px-1.5 py-0.5 bg-primary/10 text-primary rounded">in the works</span>
+            </li>
+            <li class="flex items-center gap-2 text-muted-foreground">
+              <svg class="w-4 h-4 text-muted-foreground/50 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" stroke-dasharray="4 2" />
+              </svg>
+              MCP server integrations
+            </li>
+            <li class="flex items-center gap-2 text-muted-foreground">
+              <svg class="w-4 h-4 text-muted-foreground/50 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" stroke-dasharray="4 2" />
+              </svg>
+              Image & screenshot paste
+            </li>
+            <li class="flex items-center gap-2 text-muted-foreground">
+              <svg class="w-4 h-4 text-muted-foreground/50 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" stroke-dasharray="4 2" />
+              </svg>
+              Custom skill builder
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="pt-8 border-t border-border/50 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="text-muted-foreground text-sm">© 2025 Caipi. Built with care.</div>
+        <div class="flex items-center gap-6">
+          <a href="/terms" class="text-muted-foreground text-sm hover:text-foreground transition-colors">Terms</a>
+          <a href="/privacy" class="text-muted-foreground text-sm hover:text-foreground transition-colors">Privacy</a>
+          <a href="/refund" class="text-muted-foreground text-sm hover:text-foreground transition-colors">Refund Policy</a>
+          <a href="mailto:caipi@plpp.de" class="text-muted-foreground text-sm hover:text-foreground transition-colors">Contact</a>
+        </div>
       </div>
     </div>
   </footer>
