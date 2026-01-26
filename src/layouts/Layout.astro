@@ -18,6 +18,11 @@ const { title, description = "A native desktop interface for Claude Code - the p
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -35,10 +40,8 @@ const { title, description = "A native desktop interface for Claude Code - the p
     <slot />
 
     <script is:inline>
-      // Initialize theme from localStorage or system preference
-      const theme = localStorage.getItem('theme') ||
-        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      document.documentElement.classList.toggle('dark', theme === 'dark');
+      // Initialize theme - always dark for this design
+      document.documentElement.classList.add('dark');
     </script>
   </body>
 </html>
