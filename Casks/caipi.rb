@@ -1,6 +1,6 @@
 cask "caipi" do
-  version "0.1.6"
-  sha256 "51cf5e4d3dcb8178f75bf00451008d3da5c949b5e97f22c55fefca4f21310af1"
+  version "0.1.7"
+  sha256 "7b18ec559857df6d6470ad1e2941914c88b3389332ee05a1f9314175c309c7ac"
 
   url "https://github.com/pietz/caipi.ai/releases/download/v#{version}/caipi_aarch64.dmg"
   name "Caipi"
