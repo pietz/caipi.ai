@@ -1,0 +1,11 @@
+{
+  "version": "0.1.2",
+  "notes": "Lemon Squeezy license activation",
+  "pub_date": "2026-01-27T10:50:00Z",
+  "platforms": {
+    "darwin-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRdEJFdncrSVdwNDVmMFlhbWdtRmlIZHdTUEZ0WlVBZnhrN2wzYTVTZm1OdnorZ1h0Sll5bWE4a1ZyYjI1b2hJZWxxa2d4R1pjUEJiTXR3MVFUbm5paHA0MFo2aUsyMWc0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY5NTA3MzU3CWZpbGU6Y2FpcGkuYXBwLnRhci5negovOVJJNm0veTV3UjcyNjlGK3RmNXVkQTlzQ3FZK0t2MllGbE9Lay94clkwTEk4OGZkOHZHNU40Vi84aW8wL2Qzay9JcFFJZEVSYWRtaHlka1N6WElBZz09Cg==",
+      "url": "https://github.com/pietz/caipi.ai/releases/download/v0.1.2/caipi.app.tar.gz"
+    }
+  }
+}
