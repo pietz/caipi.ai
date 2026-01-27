@@ -90,11 +90,11 @@
       role: 'assistant',
       content: "Great! Let me sort them into folders based on the dates.",
       tools: [
-        { id: 't5', type: 'Bash', target: 'Create day folders in ~/Pictures/Hawaii-2025', status: 'completed' },
+        { id: 't5', type: 'Bash', target: 'Create day folders in ~/Pictures/Vacation 2026', status: 'completed' },
         { id: 't6', type: 'Bash', target: 'Move 12 photos to day-1-arrival/', status: 'completed' },
         { id: 't7', type: 'Bash', target: 'Move 9 photos to day-2-beach/', status: 'completed' },
         { id: 't8', type: 'Bash', target: 'Move 14 photos to day-3-volcano/', status: 'completed' },
-        { id: 't9', type: 'Write', target: '~/Pictures/Hawaii-2025/README.txt', status: 'completed' },
+        { id: 't9', type: 'Write', target: '~/Pictures/Vacation 2026/README.txt', status: 'completed' },
       ],
     },
     {
@@ -228,6 +228,18 @@
   let extendedThinking = $state(true);
   let messagesEl: HTMLDivElement;
 
+  // Hide sidebars on small viewports
+  let initialized = false;
+  $effect(() => {
+    if (!initialized && typeof window !== 'undefined') {
+      initialized = true;
+      if (window.innerWidth <= 768) {
+        leftSidebar = false;
+        rightSidebar = false;
+      }
+    }
+  });
+
   $effect(() => {
     if (messagesEl) {
       messagesEl.scrollTop = messagesEl.scrollHeight;
@@ -317,7 +329,7 @@
         <button class="icon-btn" onclick={() => leftSidebar = !leftSidebar}>{@html icons.panelLeft}</button>
         <button class="icon-btn">{@html icons.home}</button>
       </div>
-      <div class="titlebar-center">Hawaii-2025</div>
+      <div class="titlebar-center">Vacation 2026</div>
       <div class="titlebar-right">
         <button class="icon-btn" onclick={() => theme = theme === 'dark' ? 'light' : 'dark'}>
           {@html theme === 'dark' ? icons.sun : icons.moon}
@@ -688,7 +700,7 @@
   }
   .icon-btn:hover { background: var(--accent); color: var(--accent-foreground); }
 
-  .content { display: flex; flex: 1; min-height: 0; }
+  .content { display: flex; flex: 1; min-height: 0; position: relative; }
 
   .sidebar {
     width: 192px; flex-shrink: 0;
@@ -699,6 +711,22 @@
   .sidebar.left { border-right: 1px solid var(--border); }
   .sidebar.right { border-left: 1px solid var(--border); }
   .sidebar.collapsed { width: 0; border-width: 0; }
+
+  @media (max-width: 768px) {
+    .sidebar {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 192px;
+      z-index: 20;
+      background: var(--background);
+      transition: transform 0.2s ease;
+    }
+    .sidebar.left { left: 0; }
+    .sidebar.right { right: 0; }
+    .sidebar.left.collapsed { transform: translateX(-100%); width: 192px; }
+    .sidebar.right.collapsed { transform: translateX(100%); width: 192px; }
+  }
 
   .sidebar-header {
     padding: 12px 12px 0;

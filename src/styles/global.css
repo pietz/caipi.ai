@@ -162,7 +162,7 @@ body::before {
 }
 
 .animate-float-in {
-  animation: float-in 1s ease-out;
+  animation: float-in 0.5s ease-out 0.25s both;
 }
 
 /* Bounce animation for scroll indicator */
