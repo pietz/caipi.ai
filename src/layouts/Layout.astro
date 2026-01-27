@@ -43,5 +43,13 @@ const { title, description = "A native desktop interface for Claude Code - the p
       // Initialize theme - always dark for this design
       document.documentElement.classList.add('dark');
     </script>
+
+    <!-- Payment checkout - TODO: Add new provider script -->
+    <script is:inline>
+      // Global function to open checkout - TODO: Implement with new provider
+      window.openCheckout = function() {
+        console.warn('Checkout not yet configured');
+      };
+    </script>
   </body>
 </html>
