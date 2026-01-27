@@ -1,0 +1,36 @@
+---
+import HeroDemo from '../demo/HeroDemo.svelte';
+---
+
+<section class="min-h-screen flex flex-col items-center justify-center px-4 md:px-8 pt-24 pb-16 relative">
+  <!-- Ambient glow -->
+  <div class="hero-glow"></div>
+
+  <!-- Hero text -->
+  <div class="text-center mb-12 md:mb-14 relative z-10">
+    <div class="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 px-4 py-1.5 rounded-full text-sm text-primary font-medium mb-6 badge-pulse">
+      Now in public alpha
+    </div>
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-4">
+      Stop Chatting. <span class="text-gradient">Start Doing.</span>
+    </h1>
+    <p class="text-lg md:text-xl text-muted-foreground max-w-lg mx-auto font-normal leading-relaxed">
+      Chat apps just talk. Caipi runs Claude Code locally — so AI can finally do things, not just say things.
+    </p>
+  </div>
+
+  <!-- Interactive Demo -->
+  <div class="relative z-10 w-full max-w-5xl animate-float-in">
+    <HeroDemo client:load />
+    <p class="text-center text-sm text-muted-foreground mt-4">
+      Try it — toggle the sidebars, switch themes, explore the interface.
+    </p>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground text-xs animate-bounce-subtle">
+    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M12 5v14M19 12l-7 7-7-7"/>
+    </svg>
+  </div>
+</section>
