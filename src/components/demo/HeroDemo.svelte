@@ -654,6 +654,10 @@
     border: 1px solid var(--border);
   }
 
+  .demo.dark .app {
+    border-color: oklch(1 0 0 / 25%);
+  }
+
   .titlebar {
     height: 36px;
     display: flex;
