@@ -1,43 +1,52 @@
-# Astro Starter Kit: Minimal
+# Caipi
 
-```sh
-npm create astro@latest -- --template minimal
+A beautiful GUI for Claude Code on macOS.
+
+**Stop chatting. Start doing.** Caipi runs Claude Code locally — so AI can finally do things, not just say things.
+
+[Website](https://caipi.ai) · [Download](https://github.com/pietz/caipi.ai/releases) · [Report Bug](https://github.com/pietz/caipi.ai/issues) · [Request Feature](https://github.com/pietz/caipi.ai/issues)
+
+## What is Caipi?
+
+Caipi is a native macOS app that provides a visual interface for [Claude Code](https://docs.anthropic.com/en/docs/claude-code). Instead of working in the terminal, you get:
+
+- **File context sidebar** — see what's being read and edited
+- **Rich previews** — view changes, plots, and markdown without switching apps
+- **Conversation history** — pick up where you left off
+- **Same engine** — powered by the official Claude Code CLI
+
+## Requirements
+
+- macOS 12 or later
+- [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code) installed
+- Active Claude Pro or Max subscription
+
+## Installation
+
+### Homebrew (recommended)
+
+```bash
+brew install --cask caipi
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Manual Download
 
-## 🚀 Project Structure
+Download the latest `.dmg` from the [Releases](https://github.com/pietz/caipi.ai/releases) page.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Issues & Feature Requests
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+Found a bug or have an idea? [Open an issue](https://github.com/pietz/caipi.ai/issues) — your feedback helps shape the product.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+When reporting bugs, please include:
+- macOS version
+- Caipi version
+- Steps to reproduce
+- Expected vs actual behavior
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## About This Repository
 
-Any static assets, like images, can be placed in the `public/` directory.
+This repository contains the [caipi.ai](https://caipi.ai) website source code and release binaries. The Caipi application source code is not open source.
 
-## 🧞 Commands
+## License
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Caipi is proprietary software. See [caipi.ai](https://caipi.ai) for pricing and terms.
