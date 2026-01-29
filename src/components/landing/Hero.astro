@@ -1,5 +1,4 @@
 ---
-import HeroDemo from '../demo/HeroDemo.svelte';
 ---
 
 <section class="min-h-screen flex flex-col items-center justify-center px-4 md:px-8 pt-24 pb-16 relative">
@@ -19,12 +18,22 @@ import HeroDemo from '../demo/HeroDemo.svelte';
     </p>
   </div>
 
-  <!-- Interactive Demo -->
-  <div class="relative z-10 w-full max-w-5xl animate-float-in">
-    <HeroDemo client:load />
-    <p class="text-center text-sm text-muted-foreground mt-4">
-      Try it — toggle the sidebars, switch themes, explore the interface.
-    </p>
+  <!-- Demo Video -->
+  <div class="relative z-10 w-full max-w-4xl animate-float-in">
+    <div class="video-container">
+      <video
+        autoplay
+        loop
+        muted
+        playsinline
+        preload="auto"
+        controls
+        class="demo-video"
+      >
+        <source src="/demo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
   </div>
 
   <!-- Scroll indicator -->
@@ -34,3 +43,23 @@ import HeroDemo from '../demo/HeroDemo.svelte';
     </svg>
   </div>
 </section>
+
+<style>
+  .video-container {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    border: 1px solid hsl(var(--border));
+    background: hsl(var(--background));
+  }
+
+  :global(.dark) .video-container {
+    border-color: hsl(0 0% 100% / 0.15);
+  }
+
+  .demo-video {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+</style>
