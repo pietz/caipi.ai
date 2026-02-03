@@ -4,9 +4,11 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
+  canonicalPath?: string;
 }
 
-const { title, description = "A native desktop interface for Claude Code - the powerful AI coding agent, now for everyone." } = Astro.props;
+const { title, description = "Caipi is a beautiful macOS app for Claude Code. A native desktop AI assistant that can read your files, run commands, do research, and get real work done on your computer.", canonicalPath = "/" } = Astro.props;
+const canonicalUrl = `https://caipi.ai${canonicalPath}`;
 ---
 
 <!doctype html>
@@ -16,6 +18,7 @@ const { title, description = "A native desktop interface for Claude Code - the p
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="canonical" href={canonicalUrl} />
     <meta name="generator" content={Astro.generator} />
 
     <!-- Fonts -->
@@ -27,12 +30,39 @@ const { title, description = "A native desktop interface for Claude Code - the p
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://caipi.ai" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content="https://caipi.ai/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://caipi.ai/og-image.png" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Caipi",
+      "description": "A native macOS desktop AI assistant powered by Claude. Read files, run commands, do research, and get real work done.",
+      "url": "https://caipi.ai",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "macOS 12+",
+      "offers": {
+        "@type": "Offer",
+        "price": "14.99",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Caipi"
+      }
+    }
+    </script>
 
     <title>{title}</title>
   </head>

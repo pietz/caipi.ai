@@ -1,191 +1,149 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import LegalLayout from '../layouts/LegalLayout.astro';
 ---
 
-<Layout title="Terms of Service - Caipi">
-  <!-- Navigation -->
-  <nav class="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-6 flex justify-between items-center" style="background: linear-gradient(to bottom, var(--background) 0%, transparent 100%);">
-    <a href="/" class="flex items-center gap-2 font-semibold text-lg tracking-tight text-foreground">
-      <span class="w-2 h-2 bg-primary rounded-full" style="box-shadow: 0 0 12px var(--primary);"></span>
-      Caipi
-    </a>
-    <div class="flex items-center gap-6 md:gap-10">
-      <a href="/#features" class="hidden md:inline text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Features</a>
-      <a href="/#pricing" class="hidden md:inline text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
-      <a href="/#pricing" class="bg-foreground text-background px-4 py-2 rounded-md font-semibold text-sm hover:bg-primary hover:text-background transition-all">
-        Download
-      </a>
-    </div>
-  </nav>
+<LegalLayout title="Terms of Service" lastUpdated="January 2026" canonicalPath="/terms/">
+  <section>
+    <h2>1. Agreement to Terms</h2>
+    <p>
+      By purchasing, downloading, or using Caipi ("the Software"), you agree to be bound by these
+      Terms of Service. If you do not agree to these terms, do not use the Software.
+    </p>
+    <p>
+      These Terms do not limit any mandatory consumer protection rights you may have under applicable
+      law.
+    </p>
+  </section>
 
-  <main class="pt-32 pb-16 px-4 md:px-8">
-    <div class="max-w-3xl mx-auto">
-      <h1 class="text-3xl md:text-4xl font-bold text-foreground mb-2">Terms of Service</h1>
-      <p class="text-muted-foreground mb-12">Last updated: January 2026</p>
+  <section>
+    <h2>2. License Grant</h2>
+    <p>
+      Upon purchase, you are granted a non-exclusive, non-transferable license to use Caipi on
+      your personal devices. This license permits:
+    </p>
+    <ul>
+      <li>Installation and use on multiple devices owned by you</li>
+      <li>Use for both personal and commercial purposes</li>
+      <li>Access to all updates within the purchased major version (e.g., all 1.x updates)</li>
+    </ul>
+    <p>This license does not permit:</p>
+    <ul>
+      <li>Redistribution, resale, or sharing of the Software</li>
+      <li>Reverse engineering or modification of the Software (except to the extent permitted by law)</li>
+      <li>Removal of any proprietary notices or labels</li>
+    </ul>
+  </section>
 
-      <div class="space-y-8 text-foreground/90">
-        <section>
-          <h2 class="text-xl font-semibold text-foreground mb-4">1. Agreement to Terms</h2>
-          <p class="text-muted-foreground leading-relaxed">
-            By purchasing, downloading, or using Caipi ("the Software"), you agree to be bound by these
-            Terms of Service. If you do not agree to these terms, do not use the Software.
-          </p>
-          <p class="mt-3 text-muted-foreground leading-relaxed">
-            These Terms do not limit any mandatory consumer protection rights you may have under applicable
-            law.
-          </p>
-        </section>
+  <section>
+    <h2>3. Requirements</h2>
+    <p>
+      Caipi requires Claude Code CLI (version 2.0 or higher) and an active Claude subscription or
+      API access from Anthropic. Caipi communicates with Claude Code through its official command-line
+      interface—all AI requests are processed by and through the Claude Code CLI installed on your
+      system. Caipi does not access Anthropic's APIs directly or modify Claude Code's authentication.
+    </p>
+    <p>
+      Claude Code is provided by Anthropic and subject to their terms of service. We are not
+      affiliated with Anthropic and cannot guarantee the availability or functionality of their
+      services. Your use of Claude Code through Caipi remains subject to Anthropic's terms, and
+      you are responsible for ensuring your usage complies with those terms.
+    </p>
+  </section>
 
-        <section>
-          <h2 class="text-xl font-semibold text-foreground mb-4">2. License Grant</h2>
-          <p class="text-muted-foreground leading-relaxed">
-            Upon purchase, you are granted a non-exclusive, non-transferable license to use Caipi on
-            your personal devices. This license permits:
-          </p>
-          <ul class="list-disc pl-6 mt-2 space-y-1 text-muted-foreground">
-            <li>Installation and use on multiple devices owned by you</li>
-            <li>Use for both personal and commercial purposes</li>
-            <li>Access to all updates within the purchased major version (e.g., all 1.x updates)</li>
-          </ul>
-          <p class="mt-3 text-muted-foreground">This license does not permit:</p>
-          <ul class="list-disc pl-6 mt-2 space-y-1 text-muted-foreground">
-            <li>Redistribution, resale, or sharing of the Software</li>
-            <li>Reverse engineering or modification of the Software (except to the extent permitted by law)</li>
-            <li>Removal of any proprietary notices or labels</li>
-          </ul>
-        </section>
+  <section>
+    <h2>4. Payments and Refunds</h2>
+    <p>
+      All payments are processed through our merchant of record, who handles payment processing,
+      invoicing, and sales tax/VAT compliance.
+    </p>
+    <p>
+      Refunds are handled in accordance with our <a href="/refund">Refund Policy</a>.
+    </p>
+  </section>
 
-        <section>
-          <h2 class="text-xl font-semibold text-foreground mb-4">3. Requirements</h2>
-          <p class="text-muted-foreground leading-relaxed">
-            Caipi requires Claude Code CLI (version 2.0 or higher) and an active Claude subscription or
-            API access from Anthropic. Caipi communicates with Claude Code through its official command-line
-            interface—all AI requests are processed by and through the Claude Code CLI installed on your
-            system. Caipi does not access Anthropic's APIs directly or modify Claude Code's authentication.
-          </p>
-          <p class="mt-3 text-muted-foreground leading-relaxed">
-            Claude Code is provided by Anthropic and subject to their terms of service. We are not
-            affiliated with Anthropic and cannot guarantee the availability or functionality of their
-            services. Your use of Claude Code through Caipi remains subject to Anthropic's terms, and
-            you are responsible for ensuring your usage complies with those terms.
-          </p>
-        </section>
+  <section>
+    <h2>5. Disclaimer of Warranties</h2>
+    <p>
+      To the extent permitted by law, the Software is provided "as is" without warranty of any kind.
+      We do not warrant that the Software will be error-free, uninterrupted, or meet your specific
+      requirements. Use of the Software is at your own risk.
+    </p>
+    <p>
+      Caipi interacts with your local file system and can execute commands on your computer.
+      While we implement permission controls, you are responsible for reviewing and approving
+      actions taken by the Software.
+    </p>
+  </section>
 
-        <section>
-          <h2 class="text-xl font-semibold text-foreground mb-4">4. Payments and Refunds</h2>
-          <p class="text-muted-foreground leading-relaxed">
-            All payments are processed through our merchant of record, who handles payment processing,
-            invoicing, and sales tax/VAT compliance.
-          </p>
-          <p class="mt-3 text-muted-foreground leading-relaxed">
-            Refunds are handled in accordance with our
-            <a href="/refund" class="text-primary hover:underline">Refund Policy</a>.
-          </p>
-        </section>
+  <section>
+    <h2>6. Limitation of Liability</h2>
+    <p>
+      To the maximum extent permitted by law, we shall not be liable for any indirect, incidental,
+      special, consequential, or punitive damages, including but not limited to loss of data,
+      business interruption, or loss of profits, arising from your use of the Software.
+    </p>
+    <p>
+      Nothing in these Terms excludes or limits liability that cannot be excluded or limited under
+      applicable law (for example, for intent, gross negligence, or injury to life, body, or health).
+    </p>
+  </section>
 
-        <section>
-          <h2 class="text-xl font-semibold text-foreground mb-4">5. Disclaimer of Warranties</h2>
-          <p class="text-muted-foreground leading-relaxed">
-            To the extent permitted by law, the Software is provided "as is" without warranty of any kind.
-            We do not warrant that the Software will be error-free, uninterrupted, or meet your specific
-            requirements. Use of the Software is at your own risk.
-          </p>
-          <p class="mt-3 text-muted-foreground leading-relaxed">
-            Caipi interacts with your local file system and can execute commands on your computer.
-            While we implement permission controls, you are responsible for reviewing and approving
-            actions taken by the Software.
-          </p>
-        </section>
+  <section>
+    <h2>7. Updates and Changes</h2>
+    <p>
+      We may update the Software and these Terms from time to time. Continued use of the Software
+      after changes constitutes acceptance of the new terms. Major changes will be communicated
+      via email or through the Software.
+    </p>
+  </section>
 
-        <section>
-          <h2 class="text-xl font-semibold text-foreground mb-4">6. Limitation of Liability</h2>
-          <p class="text-muted-foreground leading-relaxed">
-            To the maximum extent permitted by law, we shall not be liable for any indirect, incidental,
-            special, consequential, or punitive damages, including but not limited to loss of data,
-            business interruption, or loss of profits, arising from your use of the Software.
-          </p>
-          <p class="mt-3 text-muted-foreground leading-relaxed">
-            Nothing in these Terms excludes or limits liability that cannot be excluded or limited under
-            applicable law (for example, for intent, gross negligence, or injury to life, body, or health).
-          </p>
-        </section>
+  <section>
+    <h2>8. Termination</h2>
+    <p>
+      Your license to use the Software continues indefinitely for the purchased version. We reserve
+      the right to terminate your license if you violate these terms. Upon termination, you must
+      cease all use of the Software and delete all copies.
+    </p>
+  </section>
 
-        <section>
-          <h2 class="text-xl font-semibold text-foreground mb-4">7. Updates and Changes</h2>
-          <p class="text-muted-foreground leading-relaxed">
-            We may update the Software and these Terms from time to time. Continued use of the Software
-            after changes constitutes acceptance of the new terms. Major changes will be communicated
-            via email or through the Software.
-          </p>
-        </section>
+  <section>
+    <h2>9. Intellectual Property</h2>
+    <p>
+      The Software, including its code, branding, and documentation, is owned by us and protected by
+      intellectual property laws. You receive only the license described in these Terms.
+    </p>
+  </section>
 
-        <section>
-          <h2 class="text-xl font-semibold text-foreground mb-4">8. Termination</h2>
-          <p class="text-muted-foreground leading-relaxed">
-            Your license to use the Software continues indefinitely for the purchased version. We reserve
-            the right to terminate your license if you violate these terms. Upon termination, you must
-            cease all use of the Software and delete all copies.
-          </p>
-        </section>
+  <section>
+    <h2>10. Acceptable Use</h2>
+    <p>You agree not to:</p>
+    <ul>
+      <li>Use the Software in violation of applicable laws</li>
+      <li>Circumvent, disable, or interfere with licensing or security features</li>
+      <li>Use the Software to distribute malware or harm others</li>
+    </ul>
+  </section>
 
-        <section>
-          <h2 class="text-xl font-semibold text-foreground mb-4">9. Intellectual Property</h2>
-          <p class="text-muted-foreground leading-relaxed">
-            The Software, including its code, branding, and documentation, is owned by us and protected by
-            intellectual property laws. You receive only the license described in these Terms.
-          </p>
-        </section>
+  <section>
+    <h2>11. Governing Law</h2>
+    <p>
+      These Terms shall be governed by and construed in accordance with the laws of Germany.
+      To the extent permitted by law, the courts of Germany shall have jurisdiction.
+    </p>
+  </section>
 
-        <section>
-          <h2 class="text-xl font-semibold text-foreground mb-4">10. Acceptable Use</h2>
-          <p class="text-muted-foreground leading-relaxed">You agree not to:</p>
-          <ul class="list-disc pl-6 mt-2 space-y-1 text-muted-foreground">
-            <li>Use the Software in violation of applicable laws</li>
-            <li>Circumvent, disable, or interfere with licensing or security features</li>
-            <li>Use the Software to distribute malware or harm others</li>
-          </ul>
-        </section>
+  <section>
+    <h2>12. Seller Information</h2>
+    <p>
+      Caipi is provided by Paul-Louis Pröve, an individual seller based in Germany.
+    </p>
+  </section>
 
-        <section>
-          <h2 class="text-xl font-semibold text-foreground mb-4">11. Governing Law</h2>
-          <p class="text-muted-foreground leading-relaxed">
-            These Terms shall be governed by and construed in accordance with the laws of Germany.
-            To the extent permitted by law, the courts of Germany shall have jurisdiction.
-          </p>
-        </section>
-
-        <section>
-          <h2 class="text-xl font-semibold text-foreground mb-4">12. Seller Information</h2>
-          <p class="text-muted-foreground leading-relaxed">
-            Caipi is provided by Paul-Louis Pröve, an individual seller based in Germany.
-          </p>
-        </section>
-
-        <section>
-          <h2 class="text-xl font-semibold text-foreground mb-4">13. Contact</h2>
-          <p class="text-muted-foreground leading-relaxed">
-            For questions about these Terms, please contact us at
-            <a href="mailto:caipi@plpp.de" class="text-primary hover:underline">caipi@plpp.de</a>.
-          </p>
-        </section>
-      </div>
-
-      <div class="mt-12 pt-8 border-t border-border">
-        <a href="/" class="text-sm text-primary hover:underline">← Back to home</a>
-      </div>
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="py-12 px-4 md:px-8 border-t border-border">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-      <div class="text-muted-foreground text-sm">© 2025 Caipi. Built with care.</div>
-      <div class="flex items-center gap-8">
-        <a href="/terms" class="text-foreground text-sm">Terms</a>
-        <a href="/privacy" class="text-muted-foreground text-sm hover:text-foreground transition-colors">Privacy</a>
-        <a href="/refund" class="text-muted-foreground text-sm hover:text-foreground transition-colors">Refund Policy</a>
-        <a href="mailto:caipi@plpp.de" class="text-muted-foreground text-sm hover:text-foreground transition-colors">Contact</a>
-      </div>
-    </div>
-  </footer>
-</Layout>
+  <section>
+    <h2>13. Contact</h2>
+    <p>
+      For questions about these Terms, please contact us at
+      <a href="mailto:caipi@plpp.de">caipi@plpp.de</a>.
+    </p>
+  </section>
+</LegalLayout>
