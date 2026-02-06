@@ -7,13 +7,14 @@
 
   <!-- Hero text -->
   <div class="text-center mb-12 md:mb-14 relative z-10">
-    <div class="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 px-4 py-1.5 rounded-full text-sm text-primary font-medium mb-6 badge-pulse">
+    <div class="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 px-4 py-1.5 rounded-full text-sm text-primary font-medium mb-8 badge-pulse">
       Now in public alpha
     </div>
-    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight mb-4">
-      Stop Chatting. <span class="text-gradient">Start Doing.</span>
+    <h1 class="hero-title text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6">
+      Stop Chatting.<br/>
+      <span class="text-gradient">Start Doing.</span>
     </h1>
-    <p class="text-lg md:text-xl text-muted-foreground max-w-lg mx-auto font-normal leading-relaxed">
+    <p class="text-base md:text-lg text-muted-foreground max-w-md mx-auto font-normal leading-relaxed">
       Chat apps just talk. Caipi is a fast, lightweight app for Claude Code — so AI can finally do things, not just say things.
     </p>
   </div>
@@ -45,16 +46,16 @@
 </section>
 
 <style>
+  .hero-title {
+    letter-spacing: -0.03em;
+  }
+
   .video-container {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-    border: 1px solid hsl(var(--border));
-    background: hsl(var(--background));
-  }
-
-  :global(.dark) .video-container {
-    border-color: hsl(0 0% 100% / 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: var(--background);
   }
 
   .demo-video {
