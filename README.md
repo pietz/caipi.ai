@@ -1,4 +1,4 @@
-> **Archived.** This was the website and release repo for the 2024 Caipi desktop app, which is no longer developed. The app's code is at [pietz/caipi-desktop](https://github.com/pietz/caipi-desktop). The current Caipi, a workspace your AI builds into, lives at [github.com/pietz/caipi](https://github.com/pietz/caipi) and [caipi.ai](https://caipi.ai).
+> **Archived.** This was the website and release repo for the 2024 Caipi desktop app, which is no longer developed. The app's code is at [pietz/caipi-desktop](https://github.com/pietz/caipi-desktop). The current Caipi, a workspace your AI builds into, lives at [caipi.ai](https://caipi.ai).
 
 # Caipi
 
